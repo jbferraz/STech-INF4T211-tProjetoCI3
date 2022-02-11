@@ -28,9 +28,9 @@ class Login extends CI_Controller {
             $this->session->set_userdata($dados);
             redirect('Home');
         } else {
-            $dados['logado'] = NULL;
+            $dados['logado'] = 'err';
             $dados['estou_logado'] = FALSE;
-            $this->session->set_flashdata('erroLogin', 'msg');
+            $this->session->set_userdata($dados);
             redirect('Login');
         }
     }

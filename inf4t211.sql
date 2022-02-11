@@ -80,6 +80,39 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Estrutura da tabela `carro`
+--
+
+CREATE TABLE `carro` (
+  `idCarro` int(11) NOT NULL,
+  `marca` varchar(30) DEFAULT NULL,
+  `modelo` varchar(30) DEFAULT NULL,
+  `portas` char(1) DEFAULT NULL,
+  `cor` varchar(10) DEFAULT NULL,
+  `placa` varchar(7) DEFAULT NULL,
+  `idPessoa` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- Índices para tabela `carro`
+--
+ALTER TABLE `carro`
+  ADD PRIMARY KEY (`idCarro`),
+  ADD UNIQUE KEY `placa` (`placa`),
+  ADD KEY `idPessoa` (`idPessoa`);
+
+--
+-- AUTO_INCREMENT de tabela `carro`
+--
+ALTER TABLE `carro`
+  MODIFY `idCarro` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Limitadores para a tabela `carro`
+--
+ALTER TABLE `carro`
+  ADD CONSTRAINT `carro_ibfk_1` FOREIGN KEY (`idPessoa`) REFERENCES `pessoa` (`idPessoa`);
+COMMIT;
+--
 -- Índices para tabelas despejadas
 --
 

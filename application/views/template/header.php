@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="pt-br">
+<html >
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -7,6 +7,8 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -18,6 +20,7 @@
                 <a href="<?php echo base_url(); ?>login/sair">Sair</a> | 
                 <a href="<?php echo base_url() . 'home'; ?>">Home</a> | 
                 <a href="<?php echo base_url(); ?>pessoa">Pessoa</a> | 
-                <a href="<?php echo base_url(); ?>usuario">Usuário</a>
+                <a href="<?php echo base_url(); ?>usuario">Usuário</a> |
+                <a href="<?php echo base_url(); ?>carro">Carro</a>
             <?php }
             ?>
